@@ -107,7 +107,12 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+
+
 }
+
+
 
 p {
   display: flex;
@@ -115,6 +120,14 @@ p {
   align-items: center;
   font-size: 30px;
 
+}
+
+
+
+
+li {
+  font-size: 20px;
+  margin-left: -100px;
 }
 
 
