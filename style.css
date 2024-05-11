@@ -39,7 +39,7 @@ body {
   width: 100%;
 }
 
-li {
+ul li {
   list-style: none;
 }
 
@@ -51,7 +51,8 @@ a {
 h1 {
   background: linear-gradient(145deg, #3333cc 20% 30%, #a75504 40% 30%, #070a07 80% 100%);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+-webkit-text-stroke: 1px solid;
+  color: transparent;
   display: inline-block;
   font-size: 6.4rem;
   font-weight: 400;
