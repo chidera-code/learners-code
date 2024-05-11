@@ -1,37 +1,41 @@
 
-const playerText = document.querySelector("#playerText");
-const computeText = document.querySelector("#computerText");
-const resultText = document.querySelector("#resultText");
-const Choice = document.querySelectorAll(".Choice")
-let player;
-let Computer;
-let Result;
+const rockButton = document.getElementById('rock');
+const paperButton = document.getElementById('paper');
+const scissorsButton = document.getElementById('scissors');
+const resultParagraph = document.getElementById('result');
+const scoreParagraph = document.getElementById('score');
+
+const options = ['rock', 'paper', 'scissors'];
+const winningCombos = {
+  rock: 'scissors',
+  paper: 'rock',
+  scissors: 'paper'
+};
 
 
-Choice.forEach(button => button.addEventListener("click", () => {
-  playerText = button.textContent;
-  computerTurn();
-  playerText.textContent = `you :  $(player)`
-  computeText.textContent = `you :  $(Computer)`
-  resultText.textContent = mainResult();
-}));
+rockButton.addEventListener('click', () => playGame('rock'));
+paperButton.addEventListener('click', () => playGame('paper'));
+scissorsButton.addEventListener('click', () => playGame('scissors'));
 
+function playGame(userChoice) {
+  const computerChoice = getRandomOption();
+  const result = determineWinner(userChoice, computerChoice);
+  resultParagraph.textContent = `You chose ${userChoice}, computer chose ${computerChoice}. ${result}`;
 
+  scoreParagraph.textContent = `You: ${userScore} - Computer: ${computerScore}`;
+}
 
-function computerTurn() {
+function getRandomOption() {
+  return options[Math.floor(Math.random() * options.length)];
+}
 
-  const ranNumber = math.floor(math.random() * 3) + 1;
-
-  switch (ranNumber) {
-    case 1:
-      Computer = "rock"
-      break;
-    case 2:
-      Computer = "paper"
-      break;
-    case 3:
-      Computer = "scissors"
-      break;
+function determineWinner(userChoice, computerChoice) {
+  if (userChoice === computerChoice) {
+    return 'It\'s a tie!';
+  } else if (winningCombos[userChoice] === computerChoice) {
+    return 'You win!';
+  } else {
+    return 'Computer wins!';
   }
 }
 

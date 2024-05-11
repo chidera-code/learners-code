@@ -25,6 +25,8 @@ body {
   border: 1px solid #964b00;
   padding: 2rem 5rem;
   margin-top: 10rem;
+  display: flex;
+  flex-direction: column;
 
 
 }
@@ -69,4 +71,65 @@ h1 {
   border: 1px solid #964b00;
   transform: scale(1);
   border-radius: 4rem;
+}
+
+input {
+  background-color: transparent;
+  padding: 15px 60px;
+  border: 1px solid #964b00;
+  outline: none;
+  border-radius: 4rem;
+  text-align: center;
+}
+
+input::placeholder {
+  color: #da6a0269;
+  font-size: 20px;
+  visibility: visible !important;
+}
+
+.margin {
+  margin-bottom: 100px;
+}
+
+button {
+  padding: 30px;
+  background-image: linear-gradient(to bottom left, #3333cc, #99ccff);
+  border: 1px solid #964b00;
+  border-radius: 50px;
+  position: relative;
+  margin-left: 30px;
+
+
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+
+}
+
+
+
+span {
+  font-size: 70px;
+  padding: 30px;
+  font-weight: 300;
+
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
