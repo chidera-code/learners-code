@@ -5,23 +5,43 @@ const length = 15;
 const capLetter = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const lowCase = "abcdefghijklmnopqrstuvwxyz";
 const numbers = "0123456789";
-const symbols = "@#$%^&*()+_/*><,.}{|!~:;";
+const symbols = "@#$%^&*()+_/><,.}{|!";
 const altogether = capLetter + lowCase + numbers + symbols;
 
-button.addEventListener('click',) {
-  let password = "";
-  password += capLetter[Math.floor(math.random() * capLetter.length)]
-  password += lowCase[Math.floor(math.random() * lowCase.length)]
-  password += numbers[Math.floor(math.random() * numbers.length)]
-  password += symbols[Math.floor(math.random() * symbols.length)]
+
+function generatePassword() {
+  let password = ' ';
 
   while (length > password.length) {
-    password += altogether[Math.floor(math.random() * altogether.length)]
+    password += altogether[Math.floor(Math.random() * (altogether.length - 1))]
 
     passwordContainer.value = password;
   }
 }
 
+function main() {
+  button.addEventListener('click', generatePassword);
+
+}
+
+function changeColor() {
+  button.classList.add('hover')
+  console.log(
+    'Hello'
+  )
+}
+function changeBack() {
+  button.classList.remove('hover')
+  console.log(
+    'Hello'
+  )
+}
+
+button.addEventListener('mouseenter', changeColor);
+button.addEventListener('mouseleave', changeBack);
+
+
+main();
 
 
 
