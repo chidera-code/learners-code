@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #011f3c;
+  color: #fff;
+
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 3rem;
+  margin: auto 0 2rem 5rem;
+  bottom: 0;
+}
+
+h1 {
+  font-size: 6rem;
+  text-transform: capitalize;
+}
+
+span {
+  color: #068758;
+  padding-bottom: 1rem;
+  border-bottom: 8px solid #068758;
+  border-radius: 3rem;
+}
+
+svg {
+  width: 3rem;
+  height: 3rem;
+  outline-color: #068758;
+}
+
+form {
+  width: 40rem;
+  margin-top: 4rem;
+  background-color: #ffffff;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+input {
+  width: 100%;
+  border: none;
+  outline: none;
+
+}
+
+input::placeholder {
+  font-size: 1.4rem;
+  color: #3d3c3c;
+  padding: 2rem;
+}
+
+button {
+  border: none;
+  padding: 1.5rem 5rem 1.5rem 5rem;
+  background-color: #017c4d;
+  color: #fff;
+  margin-top: 1rem;
+  cursor: pointer;
+  text-transform: capitalize;
+  background-image: url(/img/electric-bolt.png);
+  background-position: .5rem center;
+  background-size: 3rem;
+  background-repeat: no-repeat;
+}
