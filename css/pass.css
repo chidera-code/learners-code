@@ -77,7 +77,8 @@ button {
   background-position: .5rem center;
   background-size: 3rem;
   background-repeat: no-repeat;
-  transition: all 600ms ease-in-out;
+  transition: all 600ms ease;
+  transform: scale(1);
 }
 
 button.hover {
@@ -95,4 +96,5 @@ button.hover {
   background-repeat: no-repeat;
   transition: background-color 8s ease;
   transition: background-position 300ms ease-in-out;
+  transform: scale(.9);
 }

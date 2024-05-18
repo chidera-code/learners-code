@@ -19,10 +19,12 @@ function generatePassword() {
   }
 }
 
-function main() {
+function main(event) {
+  // event.preventDefault();
   button.addEventListener('click', generatePassword);
 
 }
+
 
 function changeColor() {
   button.classList.add('hover')
@@ -36,9 +38,16 @@ function changeBack() {
     'Hello'
   )
 }
+function scale() {
+  button.classList.add('hover')
+
+}
+
 
 button.addEventListener('mouseenter', changeColor);
 button.addEventListener('mouseleave', changeBack);
+button.addEventListener('click', scale);
+
 
 
 main();
